@@ -9,7 +9,7 @@ barmenu.addEventListener("click",(event)=>{
     },750);
     showSidebar();
 });
-let showBarMenu =() =>{
+let showBarMenu = () =>{
     let barmenu=document.querySelector("#navbar .icon i");
     barmenu.setAttribute("id","");
     barmenu.setAttribute("style","");
@@ -29,9 +29,11 @@ let showSidebar =() =>{
 let hideSidebar = (sidebar) => {
     console.log("Hiding sidebar");
     sidebar.setAttribute("id","hideSidebar");
+    setTimeout(async()=>{
+    await sidebar.setAttribute("id","hiddenSidebar");
+    },200)
     setTimeout(()=>{
-    sidebar.setAttribute("id","hiddenSidebar");
-    },2000)
-    showBarMenu();
+        showBarMenu();
+    },200)
 }
 
