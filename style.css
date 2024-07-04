@@ -15,17 +15,34 @@ div{
     opacity: .9;
 }
 
-#sidebar{
+#hiddenSidebar{
+    margin-left: -100%;
+}
+@keyframes hidesidebar {
+    from{
+        margin-left: 1rem;
+    }
+    to{
+        margin-left: -100%;
+    }
+}
+
+#hideSidebar{
+    animation-name: hidesidebar;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
     background-color: bisque;
     height: 100vh;
-    width:20%;
+    width:30%;
     position: fixed;
-    top:11%;
+    margin:1rem;
+    top:0px;
     left:0px;
     opacity:1;
-    
+    z-index: 1;
+    border-radius: 1rem;
 }
-#sidebar .menu-items{
+.menu-items{
     opacity: 1;
     height:80%;
     width: 100%;
@@ -47,13 +64,13 @@ div{
     font-size: larger;
 }
 
-#sidebar .options{
+.options{
     margin-top: 10%;
     width: 100%;
     overflow-y: auto;
 }
 
-#sidebar .options ul{
+.options ul{
     list-style-type: none;
     width: 100%;
     height:50%;
@@ -64,13 +81,14 @@ div{
     flex-wrap: wrap;
     
 }
-#sidebar .options li{
+ .options li{
     height:15%;
     width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 
 
@@ -91,7 +109,13 @@ div{
 }
 .icon i{
     scale:2;
-    padding-left: 1.3rem;
+    padding:0 2rem;
+    transition: .3s;
+}
+.icon i:hover{
+    scale:2.3;
+    transition: .1s;
+    transition-timing-function: ease;
 }
 
 .company{
