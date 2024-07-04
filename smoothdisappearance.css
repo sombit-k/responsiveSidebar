@@ -1,0 +1,14 @@
+.disappear{
+    scale:5;
+    /* animation-name: mysmoothdisappearance; */
+    
+}
+
+/* @keyframes mysmoothdisappearance {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity:0.5;
+    }
+} */
