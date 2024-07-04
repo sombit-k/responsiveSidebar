@@ -31,7 +31,20 @@
 }
 
 .menutxt{
-    font-size: larger;
+    font-size: 2rem;
+    padding:0 0 0 1rem
+}
+
+.crossIcon{
+    justify-content: center;
+    align-items: center;
+    transition: .1s;
+    font-size: 2rem;
+    padding: 0 1rem 0 1rem;
+}
+.crossIcon:hover{
+    transition: .1s;
+    scale:1.09;
 }
 
 #sidebar .options{

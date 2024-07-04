@@ -14,5 +14,9 @@ let showSidebar =() =>{
     let sidebar = document.querySelector(".sidebar");
     console.log(sidebar);
     sidebar.setAttribute("id","sidebar");
+    let cross = document.querySelector(".crossIcon");
+    cross.addEventListener("click",()=>{
+        console.log("cross pressed")
+    })
 }
 
