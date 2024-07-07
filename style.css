@@ -10,6 +10,8 @@ body{
     z-index: 10;
     position: fixed;
     top:10%;
+    left:30%;
+    margin-left: 1rem;;
 }
 
 
@@ -39,7 +41,8 @@ div{
     height: 100vh;
     width:30%;
     position: fixed;
-    margin:1rem;
+    margin-top:1rem;
+    margin-left: 0px;
     top:0px;
     left:0px;
     opacity:1;
