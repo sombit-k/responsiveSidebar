@@ -6,7 +6,7 @@ barmenu.addEventListener("click",(event)=>{
     console.log(barmenu)
     setTimeout(()=>{
     barmenu.setAttribute("id","dissapeared");
-    },750);
+    },120);//750
     showSidebar();
 });
 let showBarMenu = () =>{
@@ -20,6 +20,12 @@ let showSidebar =() =>{
     let sidebar = document.querySelector(".sidebar");
     console.log(sidebar);
     sidebar.setAttribute("id","sidebar");
+    let hideContent=document.querySelector(".showContent");
+    hideContent.setAttribute("class","hideContent");
+    hideContent.addEventListener("click",()=>{
+        hideSidebar(sidebar);
+        hideContent.setAttribute("class","showContent");
+    })
     let cross = document.querySelector(".crossIcon");
     cross.addEventListener("click",()=>{
         hideSidebar(sidebar);
@@ -29,11 +35,9 @@ let showSidebar =() =>{
 let hideSidebar = (sidebar) => {
     console.log("Hiding sidebar");
     sidebar.setAttribute("id","hideSidebar");
-    setTimeout(async()=>{
-    await sidebar.setAttribute("id","hiddenSidebar");
-    },200)
     setTimeout(()=>{
-        showBarMenu();
-    },200)
+    sidebar.setAttribute("id","hiddenSidebar");
+    showBarMenu();
+    },200);
 }
 
